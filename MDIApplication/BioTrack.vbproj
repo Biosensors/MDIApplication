@@ -1,0 +1,738 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC7B6146-CEFE-4970-9BEE-9AF6D1D9FA78}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MDIApplication.My.MyApplication</StartupObject>
+    <RootNamespace>MDIApplication</RootNamespace>
+    <AssemblyName>BioTrack</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/BioTrack/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BioTrack.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BioTrack.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=12.0.1100.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC\CrystalDecisions.Enterprise.Framework\12.0.1100.0__692fbea5521e1304\CrystalDecisions.Enterprise.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=12.0.1100.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC\CrystalDecisions.Enterprise.InfoStore\12.0.1100.0__692fbea5521e1304\CrystalDecisions.Enterprise.InfoStore.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BioTrackMain.vb" />
+    <Compile Include="BioUsersMenus.Designer.vb">
+      <DependentUpon>BioUsersMenus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BioUsersMenus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClsConfig.vb" />
+    <Compile Include="Clsdb.vb" />
+    <Compile Include="clsPublic_Methods.vb" />
+    <Compile Include="ClsUtil.vb" />
+    <Compile Include="FrmAmpcDataDetails.Designer.vb">
+      <DependentUpon>FrmAmpcDataDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAmpcDataDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAmpcData.Designer.vb">
+      <DependentUpon>FrmAmpcData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAmpcData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAmpcDataLogSerials.Designer.vb">
+      <DependentUpon>FrmAmpcDataLogSerials.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAmpcDataLogSerials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAmpcDataLogs.Designer.vb">
+      <DependentUpon>FrmAmpcDataLogs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAmpcDataLogs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddBalloonDoubleWall.Designer.vb">
+      <DependentUpon>FrmAddBalloonDoubleWall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddBalloonDoubleWall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAssignCoatedStentRange.Designer.vb">
+      <DependentUpon>FrmAssignCoatedStentRange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAssignCoatedStentRange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAssignCoatedStents.Designer.vb">
+      <DependentUpon>FrmAssignCoatedStents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAssignCoatedStents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBalloonDoubleWall.Designer.vb">
+      <DependentUpon>FrmBalloonDoubleWall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBalloonDoubleWall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewInspectionSerials.Designer.vb">
+      <DependentUpon>FrmViewInspectionSerials.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewInspectionSerials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAmpcDataReview.Designer.vb">
+      <DependentUpon>FrmAmpcDataReview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAmpcDataReview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAmpcViewData.Designer.vb">
+      <DependentUpon>FrmAmpcViewData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAmpcViewData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFGWO.Designer.vb">
+      <DependentUpon>FrmFGWO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFGWO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFGWODetails.Designer.vb">
+      <DependentUpon>FrmFGWODetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFGWODetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRejectionReasonsList.Designer.vb">
+      <DependentUpon>FrmRejectionReasonsList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRejectionReasonsList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInspectionSerials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewStentSerials.Designer.vb">
+      <DependentUpon>FrmViewStentSerials.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewStentSerials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAssignedSerials.Designer.vb">
+      <DependentUpon>FrmAssignedSerials.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAssignedSerials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDrugFormulation.Designer.vb">
+      <DependentUpon>FrmDrugFormulation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDrugFormulation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAssignStentWO.Designer.vb">
+      <DependentUpon>FrmAssignStentWO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAssignStentWO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSerialsRejectReason.Designer.vb">
+      <DependentUpon>FrmSerialsRejectReason.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSerialsRejectReason.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStentInspection.Designer.vb">
+      <DependentUpon>FrmStentInspection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStentInspection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStentWeightOverwrite.Designer.vb">
+      <DependentUpon>FrmStentWeightOverwrite.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStentWeightOverwrite.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStentWeightsChecks.Designer.vb">
+      <DependentUpon>FrmStentWeightsChecks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStentWeightsChecks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangePassword.Designer.vb">
+      <DependentUpon>FrmChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddStandardWeight.Designer.vb">
+      <DependentUpon>FrmAddStandardWeight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddStandardWeight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBallooning.Designer.vb">
+      <DependentUpon>FrmBallooning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBallooning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditMachine.Designer.vb">
+      <DependentUpon>FrmEditMachine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditMachine.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMachines.Designer.vb">
+      <DependentUpon>FrmMachines.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMachines.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrintSerial.Designer.vb">
+      <DependentUpon>FrmPrintSerial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrintSerial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStandardWeight.Designer.vb">
+      <DependentUpon>FrmStandardWeight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStandardWeight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStentWeights.Designer.vb">
+      <DependentUpon>FrmStentWeights.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStentWeights.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewSerials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddSerial.Designer.vb">
+      <DependentUpon>FrmAddSerial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddSerial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSerials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDimension.Designer.vb">
+      <DependentUpon>FrmDimension.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDimension.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDimensionDetails.Designer.vb">
+      <DependentUpon>FrmDimensionDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDimensionDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenus.Designer.vb">
+      <DependentUpon>FrmMenus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNode.Designer.vb">
+      <DependentUpon>FrmNode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuery.Designer.vb">
+      <DependentUpon>FrmQuery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReasonCodes.Designer.vb">
+      <DependentUpon>FrmReasonCodes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReasonCodes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShipment.Designer.vb">
+      <DependentUpon>FrmShipment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmShipment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operations.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rejection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RejectionCode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoleAssign.Designer.vb">
+      <DependentUpon>RoleAssign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RoleAssign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReasonCodeStatus.Designer.vb">
+      <DependentUpon>ReasonCodeStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReasonCodeStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IniFileFunctions.vb" />
+    <Compile Include="LogIn.Designer.vb">
+      <DependentUpon>LogIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm.Designer.vb">
+      <DependentUpon>MDIForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OperationGrid.Designer.vb">
+      <DependentUpon>OperationGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OperationGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OprnByStatus.Designer.vb">
+      <DependentUpon>OprnByStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OprnByStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RolesForm.Designer.vb">
+      <DependentUpon>RolesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RolesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRolesAssign.Designer.vb">
+      <DependentUpon>UserRolesAssign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserRolesAssign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shipment.Designer.vb">
+      <DependentUpon>Shipment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Shipment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStentWO.Designer.vb">
+      <DependentUpon>FrmStentWO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStentWO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SumByReasonCodes.Designer.vb">
+      <DependentUpon>SumByReasonCodes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SumByReasonCodes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SumBySerial.Designer.vb">
+      <DependentUpon>SumBySerial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SumBySerial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRegForm.Designer.vb">
+      <DependentUpon>UserRegForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMainForm.Designer.vb">
+      <DependentUpon>UserMainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserMainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BioUsersMenus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BioUsersMenus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAmpcDataDetails.resx">
+      <DependentUpon>FrmAmpcDataDetails.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAmpcData.resx">
+      <DependentUpon>FrmAmpcData.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAmpcDataLogSerials.resx">
+      <DependentUpon>FrmAmpcDataLogSerials.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAmpcDataLogs.resx">
+      <DependentUpon>FrmAmpcDataLogs.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddBalloonDoubleWall.resx">
+      <DependentUpon>FrmAddBalloonDoubleWall.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAssignCoatedStentRange.resx">
+      <DependentUpon>FrmAssignCoatedStentRange.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAssignCoatedStents.resx">
+      <DependentUpon>FrmAssignCoatedStents.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBalloonDoubleWall.resx">
+      <DependentUpon>FrmBalloonDoubleWall.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewInspectionSerials.resx">
+      <DependentUpon>FrmViewInspectionSerials.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAmpcDataReview.resx">
+      <DependentUpon>FrmAmpcDataReview.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAmpcViewData.resx">
+      <DependentUpon>FrmAmpcViewData.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFGWO.resx">
+      <DependentUpon>FrmFGWO.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFGWODetails.resx">
+      <DependentUpon>FrmFGWODetails.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRejectionReasonsList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmRejectionReasonsList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInspectionSerials.resx">
+      <DependentUpon>FrmInspectionSerials.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewStentSerials.resx">
+      <DependentUpon>FrmViewStentSerials.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAssignedSerials.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmAssignedSerials.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDrugFormulation.resx">
+      <DependentUpon>FrmDrugFormulation.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAssignStentWO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmAssignStentWO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSerialsRejectReason.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmSerialsRejectReason.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStentInspection.resx">
+      <DependentUpon>FrmStentInspection.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStentWeightOverwrite.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmStentWeightOverwrite.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStentWeightsChecks.resx">
+      <DependentUpon>FrmStentWeightsChecks.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddStandardWeight.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmAddStandardWeight.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBallooning.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBallooning.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditMachine.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmEditMachine.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMachines.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMachines.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrintSerial.resx">
+      <DependentUpon>FrmPrintSerial.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStandardWeight.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmStandardWeight.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStentWeights.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmStentWeights.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewSerials.resx">
+      <DependentUpon>FrmViewSerials.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddSerial.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmAddSerial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSerials.resx">
+      <DependentUpon>FrmSerials.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDimension.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDimension.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDimensionDetails.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDimensionDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMenus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmNode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmQuery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReasonCodes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReasonCodes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmShipment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmShipment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operations.resx">
+      <DependentUpon>Operations.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rejection.resx">
+      <DependentUpon>Rejection.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RejectionCode.resx">
+      <DependentUpon>RejectionCode.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportV.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoleAssign.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RoleAssign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReasonCodeStatus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReasonCodeStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LogIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm.resx">
+      <DependentUpon>MDIForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperationGrid.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OperationGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OprnByStatus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OprnByStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RolesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RolesForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRolesAssign.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserRolesAssign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shipment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Shipment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStentWO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmStentWO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SumByReasonCodes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SumByReasonCodes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SumBySerial.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SumBySerial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRegForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserRegForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkOrder.resx">
+      <DependentUpon>WorkOrder.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Blip.wav" />
+    <Content Include="config.xml" />
+    <Content Include="Parachute.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

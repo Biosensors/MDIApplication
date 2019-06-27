@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes" ?> 
+ <NewDataSet>
+ <Table1>
+  <connectionString>
+    <!--SERVER=AS-SG-TL-SQ-001;Database=210;UId=exact;
+Trusted_Connection=Yes-->
+    SERVER=TLSQ02;Database=BioTrack;UId=exact;Trusted_Connection=Yes
+  </connectionString>
+   <INIFilePath>
+     \\sgds01\Config\Biotrack.ini
+   </INIFilePath>
+
+ </Table1>
+  </NewDataSet>
