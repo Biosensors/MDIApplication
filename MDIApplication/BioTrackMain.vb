@@ -7,6 +7,7 @@ Module BioTrackMain
 
     Public Structure stWorkOrders
         Public sWorkOrderNo As String
+        Public sWorkOrderNo As String
         Public dWorkOrderDate As Date
         Public sItemCode As String
         Public sItemDescription As String
